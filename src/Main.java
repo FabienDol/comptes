@@ -101,12 +101,15 @@ public class Main {
         System.out.println(b1.start());
 
         System.out.println(p1.displayEngine());
+        System.out.println(b1.stop());
 
-        System.out.println(o1.countByBrand("Cessna"));
+        System.out.println("Nombre de Cessna dans le garage : " + o1.countByBrand("Cessna"));
         System.out.println(o1.getVehicleArrayList());
         Boat b2 = new Boat(50, "HH");
         o1.add(b2);
         System.out.println(o1.getVehicleArrayList());
+
+        o1.startAllVehicles();
 
     }
 

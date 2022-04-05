@@ -13,7 +13,11 @@ public class Boat extends Vehicle{
 
     @Override
     public String stop() {
-        return "Le bateau " + this.brand + " jète son l'ancre";
+        return "Le bateau " + this.brand + " jète son ancre";
+    }
+
+    public void sail() {
+        System.out.println("Le bateau navigue sur les flots");
     }
 
     @Override

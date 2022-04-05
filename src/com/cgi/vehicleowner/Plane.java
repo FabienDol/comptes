@@ -16,6 +16,10 @@ public class Plane extends Vehicle {
         return "L'avion " + this.brand + " attérit";
     }
 
+    public void fly() {
+        System.out.println("L'avion vole dans les airs");
+    }
+
     @Override
     public String toString() {
         return "Plane{" +

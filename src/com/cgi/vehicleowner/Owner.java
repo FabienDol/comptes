@@ -13,18 +13,29 @@ public class Owner {
     }
 
     public int countByBrand(String brand) {
-        for (Vehicle vehicle : vehicleArrayList) {
+        for (Vehicle vehicle : this.vehicleArrayList) {
             if (vehicle.getBrand().equalsIgnoreCase(brand)) {
                 count++;
             }
         }
         return count;
-
     }
 
     public void add(Vehicle v) {
-        vehicleArrayList.add(v);
+        this.vehicleArrayList.add(v);
         System.out.println("Véhicule ajouté à la liste de " + this.name + " avec sa méthode add");
+    }
+
+    public void startAllVehicles() {
+        for (Vehicle vehicle : this.vehicleArrayList) {
+            if (vehicle instanceof Boat) {
+                ((Boat) vehicle).sail();
+            } else if (vehicle instanceof Plane) {
+                ((Plane) vehicle).fly();
+            } else {
+                System.out.println("La voiture ne fait rien");
+            }
+        }
     }
 
     public String getName() {
