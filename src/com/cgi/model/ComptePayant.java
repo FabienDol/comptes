@@ -21,4 +21,11 @@ public class ComptePayant extends Compte{
         }
         System.out.println("retirer : " + montant + "; nouveau solde : " + solde);
     }
+
+    @Override
+    public String toString() {
+        return "ComptePayant{" +
+                "solde=" + solde +
+                '}';
+    }
 }

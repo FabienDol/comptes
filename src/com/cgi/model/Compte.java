@@ -30,4 +30,11 @@ public abstract class Compte {
         this.id = id;
     }
 
+    @Override
+    public String toString() {
+        return "Compte{" +
+                "id=" + id +
+                ", solde=" + solde +
+                '}';
+    }
 }

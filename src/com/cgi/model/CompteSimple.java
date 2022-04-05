@@ -4,7 +4,6 @@ public class CompteSimple extends Compte{
 
     private float decouvert;
 
-
     public CompteSimple(float decouvert) {
         super();
         System.out.println("id : " + this.getId());
@@ -35,5 +34,13 @@ public class CompteSimple extends Compte{
 
     public void setDecouvert(float decouvert) {
         this.decouvert = decouvert;
+    }
+
+    @Override
+    public String toString() {
+        return "CompteSimple{" +
+                "solde=" + solde +
+                ", decouvert=" + decouvert +
+                '}';
     }
 }

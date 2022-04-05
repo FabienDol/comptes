@@ -6,7 +6,7 @@ public class CompteEpargne extends Compte{
 
     public CompteEpargne(float taux) {
         super();
-        this.taux = taux;
+        this.setTaux(taux);
     }
 
     public void calculInterets() {
@@ -14,4 +14,19 @@ public class CompteEpargne extends Compte{
         System.out.println("solde après intérets : " + solde);
     }
 
+    public float getTaux() {
+        return taux;
+    }
+
+    public void setTaux(float taux) {
+        this.taux = taux;
+    }
+
+    @Override
+    public String toString() {
+        return "CompteEpargne{" +
+                "solde=" + solde +
+                ", taux=" + taux +
+                '}';
+    }
 }
