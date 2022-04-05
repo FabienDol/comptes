@@ -24,14 +24,7 @@ public class Warrior extends Humanoid{
 
     @Override
     public void attack(Humanoid h) {
-        h.receiveDamage(this.force);
-        if (h.getHealth() <= 0) {
-            h.setHealth(0);
-            System.out.println("Attack de " + this.name + " (force : " + this.force + ") : health de " + h.name + " mise à jour : " + h.health);
-            System.out.println(h.name + " est mort au champs d'honneur");
-        } else {
-            System.out.println("Attack de " + this.name + " (force : " + this.force + ") : health de " + h.name + " mise à jour : " + h.health);
-        }
+        super.attack(h);
         setDoubleAttackReady(true);
     }
 

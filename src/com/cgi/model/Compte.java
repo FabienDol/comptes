@@ -6,8 +6,9 @@ public abstract class Compte {
     protected float solde;
     private static int countComptes;
 
-    public Compte() {
+    public Compte(float solde) {
         this.setId(++countComptes);
+        this.solde = solde;
     }
 
     public void verser(float montant) {

@@ -16,9 +16,9 @@ public class Main {
 
     public static void comptes() {
 
-        CompteSimple compteS1 = new CompteSimple(200);
-        CompteSimple compteS2 = new CompteSimple(3000);
-        CompteSimple compteS3 = new CompteSimple(0);
+        CompteSimple compteS1 = new CompteSimple(2000, 200);
+        CompteSimple compteS2 = new CompteSimple(1000,3000);
+        CompteSimple compteS3 = new CompteSimple(500,0);
 
         compteS1.verser(50);
         compteS1.retirer(20);
@@ -33,12 +33,12 @@ public class Main {
         System.out.println(compteS3);
 
 
-        ComptePayant compteP1 = new ComptePayant();
+        ComptePayant compteP1 = new ComptePayant(3000);
         compteP1.verser(50);
         compteP1.retirer(20);
         System.out.println(compteP1);
 
-        CompteEpargne compteE1 = new CompteEpargne(0.75f);
+        CompteEpargne compteE1 = new CompteEpargne(1000, 0.75f);
         compteE1.verser(50);
         compteE1.calculInterets();
         System.out.println(compteE1);
@@ -73,6 +73,7 @@ public class Main {
         wiz1.attack(b1);
         wiz1.activateShield();
         b2.attack(wiz1);
+        wiz2.spellCast(wiz1);
 
     }
 

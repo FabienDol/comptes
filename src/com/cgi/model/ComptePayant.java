@@ -2,8 +2,8 @@ package com.cgi.model;
 
 public class ComptePayant extends Compte{
 
-    public ComptePayant() {
-        super();
+    public ComptePayant(float solde) {
+        super(solde);
         System.out.println("id : " + this.getId());
     }
 

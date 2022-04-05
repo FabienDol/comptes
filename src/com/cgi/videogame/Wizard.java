@@ -33,14 +33,7 @@ public class Wizard extends Humanoid{
 
     @Override
     public void attack(Humanoid h) {
-        h.receiveDamage(this.force);
-        if (h.getHealth() <= 0) {
-            h.setHealth(0);
-            System.out.println("Attack de " + this.name + " (force : " + this.force + ")");
-            System.out.println(h.name + " est mort au champs d'honneur");
-        } else {
-            System.out.println("Attack de " + this.name + " (force : " + this.force + ")");
-        }
+        super.attack(h);
         this.addMana(1);
         if (shield) {
             this.hitsOnShield++;
@@ -57,8 +50,7 @@ public class Wizard extends Humanoid{
             System.out.println("Bouclier de " + this.name + " réduit les dommages");
             System.out.println("receiveDamage de " + (damage - ( damage * 20 / 100)) + " sur " + this.name + " ; health de " + this.name + " mise à jour : " + this.health);
         } else {
-            this.health -= damage;
-            System.out.println("receiveDamage de " + damage + " sur " + this.name + " ; health de " + this.name + " mise à jour : " + this.health);
+            super.receiveDamage(damage);
         }
     }
 
