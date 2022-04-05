@@ -28,12 +28,12 @@ public class Owner {
 
     public void startAllVehicles() {
         for (Vehicle vehicle : this.vehicleArrayList) {
+            System.out.println(vehicle.start());
+
             if (vehicle instanceof Boat) {
                 ((Boat) vehicle).sail();
             } else if (vehicle instanceof Plane) {
                 ((Plane) vehicle).fly();
-            } else {
-                System.out.println("La voiture ne fait rien");
             }
         }
     }

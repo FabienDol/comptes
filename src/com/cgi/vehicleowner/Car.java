@@ -13,7 +13,7 @@ public class Car extends Vehicle {
 
     @Override
     public String stop() {
-        return "La voiture " + this.brand + " se gare sur e bas côté";
+        return "La voiture " + this.brand + " se gare sur le bas côté";
     }
 
     @Override
