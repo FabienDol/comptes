@@ -14,7 +14,7 @@ public class Owner {
 
     public int countByBrand(String brand) {
         for (Vehicle vehicle : vehicleArrayList) {
-            if (vehicle.getBrand() == brand) {
+            if (vehicle.getBrand().equalsIgnoreCase(brand)) {
                 count++;
             }
         }
