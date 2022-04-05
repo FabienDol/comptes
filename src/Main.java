@@ -2,6 +2,10 @@ import com.cgi.model.Compte;
 import com.cgi.model.CompteEpargne;
 import com.cgi.model.ComptePayant;
 import com.cgi.model.CompteSimple;
+import com.cgi.vehicleowner.Boat;
+import com.cgi.vehicleowner.Car;
+import com.cgi.vehicleowner.Owner;
+import com.cgi.vehicleowner.Plane;
 import com.cgi.videogame.Berserker;
 import com.cgi.videogame.Warrior;
 import com.cgi.videogame.Wizard;
@@ -11,6 +15,7 @@ public class Main {
 
         comptes();
         videoGame();
+        vehicles();
 
     }
 
@@ -46,7 +51,7 @@ public class Main {
     }
 
     public static void videoGame() {
-        System.out.println("*******************************************\n\n\n\n*******************************************");
+        System.out.println("*******************************************\n\n\n*******************************************");
 
         Berserker b1 = new Berserker("b1", 50, 10, 5);
         System.out.println(b1);
@@ -74,6 +79,34 @@ public class Main {
         wiz1.activateShield();
         b2.attack(wiz1);
         wiz2.spellCast(wiz1);
+
+    }
+
+    public static void vehicles() {
+
+        System.out.println("*******************************************\n\n\n*******************************************");
+
+        Car c1 = new Car(5, "Renault");
+        Plane p1 = new Plane(20, "Cessna");
+        Plane p2 = new Plane(40, "Cessna");
+        Boat b1 = new Boat(30, "Riva");
+        Owner o1 = new Owner("o1");
+        o1.getVehicleArrayList().add(c1);
+        o1.getVehicleArrayList().add(p1);
+        o1.getVehicleArrayList().add(b1);
+        o1.getVehicleArrayList().add(p2);
+
+        System.out.println(c1.start());
+        System.out.println(p1.start());
+        System.out.println(b1.start());
+
+        System.out.println(p1.displayEngine());
+
+        System.out.println(o1.countByBrand("Cessna"));
+        System.out.println(o1.getVehicleArrayList());
+        Boat b2 = new Boat(50, "HH");
+        o1.add(b2);
+        System.out.println(o1.getVehicleArrayList());
 
     }
 
