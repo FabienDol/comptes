@@ -1,6 +1,6 @@
 package com.cgi.vehicleowner;
 
-public class Boat extends Vehicle{
+public class Boat extends Vehicle implements Flottant {
 
     public Boat(int engine, String brand) {
         super(engine, brand);
@@ -25,5 +25,22 @@ public class Boat extends Vehicle{
         return "Boat{" +
                 "brand='" + brand + '\'' +
                 '}';
+    }
+
+    @Override
+    public void naviguer() {
+        System.out.println("Le bateau navigue");
+    }
+
+    @Override
+    public void jeterAncre() {
+        System.out.println("Le bateau jète l'ancre");
+
+    }
+
+    @Override
+    public void leverAncre() {
+        System.out.println("Le bateau lève l'ancre");
+
     }
 }

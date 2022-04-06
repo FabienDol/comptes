@@ -1,6 +1,6 @@
 package com.cgi.vehicleowner;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Roulant {
 
     public Car(int engine, String brand) {
         super(engine, brand);
@@ -21,5 +21,10 @@ public class Car extends Vehicle {
         return "Car{" +
                 "brand='" + brand + '\'' +
                 '}';
+    }
+
+    @Override
+    public void rouler() {
+        System.out.println("La voiture roule");
     }
 }

@@ -111,6 +111,16 @@ public class Main {
 
         o1.startAllVehicles();
 
+        System.out.println("\n*******************************************\n");
+
+        b2.leverAncre();
+        b2.naviguer();
+        b2.jeterAncre();
+
+        p2.decoller();
+        p2.barrelRoll();
+        p2.crash();
+
     }
 
 }
