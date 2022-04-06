@@ -27,6 +27,17 @@ public class Berserker extends Humanoid {
         this.rage += 3;
     }
 
+    @Override
+    public int compareTo(Humanoid o) {
+        if (this.force < o.force) {
+            return -1;
+        } else if (this.force > o.force) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     public int getRage() {
         return rage;
     }
@@ -44,4 +55,5 @@ public class Berserker extends Humanoid {
                 ", force=" + force +
                 '}';
     }
+
 }

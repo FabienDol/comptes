@@ -7,8 +7,12 @@ import com.cgi.vehicleowner.Car;
 import com.cgi.vehicleowner.Owner;
 import com.cgi.vehicleowner.Plane;
 import com.cgi.videogame.Berserker;
+import com.cgi.videogame.Humanoid;
 import com.cgi.videogame.Warrior;
 import com.cgi.videogame.Wizard;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -79,6 +83,20 @@ public class Main {
         wiz1.activateShield();
         b2.attack(wiz1);
         wiz2.spellCast(wiz1);
+
+        //comparaison des humanoides par force
+        ArrayList<Humanoid> humanoides = new ArrayList<>();
+        humanoides.add(wiz1);
+        humanoides.add(wiz2);
+        humanoides.add(war1);
+        humanoides.add(war2);
+
+        System.out.println("avant Collections.sort()");
+        System.out.println(humanoides);
+        Collections.sort(humanoides);
+        System.out.println("après Collections.sort()");
+        System.out.println(humanoides);
+
 
     }
 

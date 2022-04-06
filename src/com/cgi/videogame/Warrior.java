@@ -28,6 +28,17 @@ public class Warrior extends Humanoid{
         setDoubleAttackReady(true);
     }
 
+    @Override
+    public int compareTo(Humanoid o) {
+        if (this.force < o.force) {
+            return -1;
+        } else if (this.force > o.force) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     public boolean isDoubleAttackReady() {
         return doubleAttackReady;
     }
@@ -45,4 +56,5 @@ public class Warrior extends Humanoid{
                 ", doubleAttackReady=" + doubleAttackReady +
                 '}';
     }
+
 }

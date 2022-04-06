@@ -1,6 +1,6 @@
 package com.cgi.videogame;
 
-public abstract class Humanoid {
+public abstract class Humanoid implements Comparable<Humanoid> {
 
     protected String name;
     protected double health;
