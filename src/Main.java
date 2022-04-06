@@ -1,7 +1,4 @@
-import com.cgi.model.Compte;
-import com.cgi.model.CompteEpargne;
-import com.cgi.model.ComptePayant;
-import com.cgi.model.CompteSimple;
+import com.cgi.model.*;
 import com.cgi.vehicleowner.Boat;
 import com.cgi.vehicleowner.Car;
 import com.cgi.vehicleowner.Owner;
@@ -30,15 +27,27 @@ public class Main {
         CompteSimple compteS3 = new CompteSimple(500,0);
 
         compteS1.verser(50);
-        compteS1.retirer(20);
+        try {
+            compteS1.retirer(3000);
+        } catch (DecouvertException e) {
+            System.out.println(e.getMessage());
+        }
         System.out.println(compteS1);
 
         compteS2.verser(1000);
-        compteS2.retirer(2000);
+        try {
+            compteS2.retirer(2000);
+        } catch (DecouvertException e) {
+            System.out.println(e.getMessage());
+        }
         System.out.println(compteS2);
 
         compteS3.verser(100);
-        compteS3.retirer(200);
+        try {
+            compteS3.retirer(200);
+        } catch (DecouvertException e) {
+            System.out.println(e.getMessage());
+        }
         System.out.println(compteS3);
 
 

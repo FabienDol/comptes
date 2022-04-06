@@ -11,7 +11,7 @@ public class CompteSimple extends Compte{
     }
 
     @Override
-    public void retirer(float montant){
+    public void retirer(float montant) throws DecouvertException {
         float ancienSolde = solde;
         solde -= montant;
 
@@ -23,6 +23,7 @@ public class CompteSimple extends Compte{
             System.out.println("Vous avez dépassé votre découvert autorisé qui est de " + this.decouvert);
             solde = ancienSolde;
             System.out.println("solde : " + solde);
+            throw new DecouvertException("Le découvert autorisé est dépassé");
         } else {
             System.out.println("retirer " + montant + "; solde : " + solde);
         }

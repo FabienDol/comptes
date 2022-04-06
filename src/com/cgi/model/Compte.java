@@ -16,11 +16,11 @@ public abstract class Compte {
         System.out.println("verser : " + montant + "; nouveau solde : " + solde);
     }
 
-    public void retirer(float montant) {
+    public void retirer(float montant) throws RetraitException, DecouvertException {
         solde -= montant;
         if (solde < 0) {
             solde = 0;
-        }
+        } else throw new RetraitException("Impossible de retirer : solde négatif");
     }
 
     public int getId() {
